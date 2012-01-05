@@ -1,0 +1,93 @@
+<%= render 'menu' %>
+<div id='top-wrapper'>
+  <div class='container' id='intro'>
+    <section class='main'>
+      <article id='intro'>
+        <header>
+          <h1>
+            <%= t('intro.title').html_safe %>
+          </h1>
+        </header>
+        <p><%= t('intro.one') %></p>
+        <p><%= t('intro.two') %></p>
+        <p><%= t('intro.three') %></p>
+      </article>
+      <aside id='intro_img'>
+        
+      </aside>
+      
+      <!--- Begin slider -->
+      <div id='slides_wrapper'>
+      <div id="slides">
+				<div class="slides_container">
+				  <div class="slide">
+				    <%= image_tag 'slide-1.jpg' %>
+				    <p class='caption'>飞哥和李锦记的传人在一起</p>
+			    </div>
+				  <div class="slide">
+				    <%= image_tag 'slide-2.jpg' %>
+				    <p class='caption'>飞哥潮装接受电视台采访</p>
+			    </div>
+				  <div class="slide">
+				    <%= image_tag 'slide-3.jpg' %>
+				    <p class='caption'>飞哥吃喝玩乐全接触！</p>
+			    </div>
+				</div>
+				
+				<a href="#" class="prev"><%= image_tag 'arrow-prev.png' %></a>
+				<a href="#" class="next"><%= image_tag 'arrow-next.png' %></a>
+			</div>
+			</div>
+      
+      <!--- End slider -->
+    </section>
+  </div>
+</div>
+
+<div id='mid-wrapper'>
+  <div class='container' id='poster'>
+    <section class='main'>
+      <div class='poster' id='poster1'>
+        <h1><%= image_tag 'post1-title.png' %></h1>
+        <p><%= t('poster.one') %></p>
+      </div>
+      <div class='poster' id='poster2'>
+        <h1><%= image_tag 'post2-title.png' %></h1>
+        <p><%= t('poster.two') %></p>
+      </div>
+      <div class='poster' id='poster3'>
+        <h1><%= image_tag 'post3-title.png' %></h1>
+        <p><a href=''>欢迎关注飞哥的新微博哦！</a></p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id='bottom-wrapper'>
+  <div class='container' id='contact'>
+    <section class='main'>
+      <header>
+        <h1></h1>
+        <ul>
+          <li class='address'>成都电视台</li>
+          <li class='email'>feige@feige.com</li>
+        </ul>
+      </header>
+      <h1 class='comment-form-header'></h1>
+      <%= form_tag '/', :id => 'comment-form' do %>
+        <%= text_field_tag :username %>
+        <%= text_field_tag :email %>
+        <%= button_tag 'Send' %>
+        <%= text_area_tag :content %>
+      <% end %>
+    </section>
+  </div>
+</div>
+
+<div id='foot-wrapper'>
+  <div class='container'>
+    <ul>
+      <li>COPYRIGHT © 2012 HEYOOK WEBDESIGN. ALL RIGHTS RESERVED</li>
+    
+  </div>
+</div>

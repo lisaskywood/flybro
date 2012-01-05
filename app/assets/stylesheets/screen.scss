@@ -1,0 +1,253 @@
+@import "blueprint/grid";
+@import "blueprint/debug";
+@import "blueprint/reset";
+
+
+#top-wrapper {
+  background: url(shadowedge.png) bottom left repeat-x;
+ 
+}
+
+#mid-wrapper {
+  div.container{
+    padding-bottom:0px;
+  }
+
+  background: url(bluebg.png);
+  .poster {
+    &#poster1 {
+      height: 350px;
+      padding-left: 225px;
+      background: url(post_pic1.png) top left no-repeat;
+      h1 {
+        height: 55px;
+      }
+      p {
+        background: url(poster_bg.png);
+        padding: 30px;
+        font-size: 0.9em;
+        color: #fff;
+        line-height: 24px;
+        text-indent: 20px;
+      }
+    }
+    
+    &#poster2 {
+      height: 265px;
+      padding-right: 225px;
+      background: url(post_pic2.png) top right no-repeat;
+      h1 {
+        height: 55px;
+      }
+      p {
+        background: url(poster_bg.png);
+        padding: 30px;
+        font-size: 0.9em;
+        color: #fff;
+        line-height: 24px;
+        text-indent: 20px;
+      }
+    }
+    
+     &#poster3 {
+       height: 215px;
+       padding-left: 225px;
+       background: url(post_pic3.png) top left no-repeat;
+       h1 {
+         height: 55px;
+       }
+       p {
+         background: url(poster_bg.png);
+         padding: 30px;
+         font-size: 1.2em;
+         color: #fff;
+         line-height: 24px;
+         text-indent: 20px;
+         a:link {
+           color:#fff;
+           text-decoration:none;}
+         a:visited {
+           color:#fff;
+           text-decoration:none;}
+         a:hover {
+           color:yellow;
+           text-decoration:none;}
+         a:active {
+           color:yellow;
+           text-decoration:underline;}
+       }
+     }
+      
+  }
+}
+
+#bottom-wrapper {
+  header {
+    margin-bottom: 20px;
+    h1 {
+      padding-left: 120px;
+      background: url(contact_head.png)  no-repeat;
+      height: 38px;
+      margin-bottom:30px;
+    }
+    ul
+    {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      @include clearfix;
+      li
+      {
+        float: left;
+        background: url(contact_icon.png) no-repeat;
+        height: 50px;
+        line-height: 50px;
+        text-indent:60px;
+        width: 330px;
+        color:#555;
+        &.email { 
+          background-position: 0px -50px; 
+        }
+      }
+    }
+  }
+  h1.comment-form-header{
+    padding-left: 120px;
+    background: url(msgboard.png)  no-repeat;
+    height: 38px;
+    margin-top:100px;
+    margin-bottom:30px;
+  }
+}
+
+#foot-wrapper {
+  background: url(green.png);
+  height:100px;
+  .container{
+    text-align:center;
+    font-size:0.7em;
+    color:#fff;
+  };
+}
+
+
+aside#intro_img{
+  @include column(7, true);
+  height:520px;
+  background: url(intro_img.png) 10px 30px no-repeat;
+}
+
+article#intro {
+  @include column(12);
+  header {
+    margin-bottom: 20px;
+    h1 {
+      padding-left: 120px;
+      background: url(feige-title.png) 10px 0px no-repeat;
+      height: 60px;
+      font-size: 1.2em;
+      color:#555;
+    }
+  }
+  p {
+    background:url(navblue.png);
+    padding: 10px 10px 20px 10px;
+    color:#666666;
+    font-size: 0.9em;
+    line-height: 24px;
+    text-indent: 20px;
+  }
+}
+
+body {
+  background: url(blueblock.png);
+}
+
+body {
+  font-family: 'Arial',heiti;
+  .container {
+    @include container;
+    padding: 50px 0;
+    section.main {
+      @include prepend(4);
+      @include column(19);
+    }
+  }
+}
+
+nav#menu {
+  padding-top: 30px;
+  ul {
+    list-style: none;
+    padding: 20px 8px;
+    background: url(navblue.png); 
+    li {
+      font-weight:bold;
+       padding: 3px 0;
+       
+      &#who {
+        color:#029bdc;
+      }
+      &#news {
+        color:#4cb301;
+      }
+      &#con {
+        color:#8560a8;
+      }
+     
+      a {
+        display: block;
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        background-color: #fff;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+$input-height: 30px;
+form#comment-form {
+  background-color: #00c7ff;
+  @include clearfix;
+  padding: 14px;
+  * { 
+    padding:0;margin:0; 
+    border:none; 
+    font-size:1.1em;
+    line-height: $input-height;
+  }
+  input#username, input#email {
+    float:left;
+    width:254px;
+    padding-left:36px;
+    margin-right:10px;
+    height: 36px;
+  }
+  input#username{
+    background: #fff url(formicon.png) 0 0 no-repeat;
+  }
+  input#email{
+    background: #fff url(formicon.png) 0 -36px no-repeat;
+  }
+  button[type=submit] {
+    float:left;
+    width: 120px;
+    height: 36px;
+    text-indent:-5000px;
+    background:#fff url(submit.png) 50% 50% no-repeat;
+    cursor:pointer;
+  }
+  textarea {
+    background: #fff url(formicon.png) 0 -72px no-repeat;
+    float:left;
+    width: 710px - 31px;
+    margin-top:10px;
+    height:120px;
+    padding:5px;
+    padding-left:36px;
+  }
+}
