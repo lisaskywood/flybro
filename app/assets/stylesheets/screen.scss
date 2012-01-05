@@ -203,7 +203,12 @@ nav#menu {
         background-color: #fff;
         text-align: center;
         text-decoration: none;
+        &:hover{
+          cursor: pointer;
+          background-color: #efe;
+        }
       }
+      
     }
   }
 }
