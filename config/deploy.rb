@@ -16,7 +16,7 @@ set :user, 'deploy'
 
 # Setup git
 set :scm, :git
-set :scm_username, 'he9lin'
+set :scm_username, 'lisaskywood'
 set :repository, "git@github.com:#{scm_username}/#{project}.git"
 set :branch, 'master'
 
@@ -77,10 +77,10 @@ end
 namespace :deploy do
   desc "start thin"
   task :start, :roles => :app do
-    run "cd #{current_path};thin start -e production -d"
+    run "cd #{current_path}; bundle exec thin start -e production -d"
   end
   task :stop, :roles => :app do
-    run "cd #{current_path};thin stop -e production"
+    run "cd #{current_path}; bundle exec thin stop -e production"
   end
 end
 
