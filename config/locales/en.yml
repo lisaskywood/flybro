@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  mail:
+    sent: 'Your mail has been sent!'
+    missing: 'Name, Email, or Content field missing'
   intro: 
     title: '电视主持人<br />电台DJ'
     one: '说起飞哥不仅仅会说吃哦！曾主持成都深夜广播节目《午夜接触》也曾主持北京音乐台的《军旅之声》《悠悠故乡情》，还曾编导了由刘蓓主演的电视剧《渴望生活》。新华社曾摘文"飞哥掌管成都人的食和色。"'
