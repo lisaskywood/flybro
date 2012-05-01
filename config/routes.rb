@@ -1,5 +1,7 @@
 Flybro::Application.routes.draw do
   root to: 'home#index'
+  match 'mail' => 'home#mail'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

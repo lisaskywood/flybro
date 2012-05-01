@@ -76,7 +76,7 @@
         </ul>
       </header>
       <h1 class='comment-form-header'></h1>
-      <%= form_tag '/', :id => 'comment-form' do %>
+      <%= form_tag '/mail', :id => 'comment-form', :remote => true do %>
         <%= text_field_tag :username %>
         <%= text_field_tag :email %>
         <%= button_tag 'Send' %>
@@ -88,8 +88,8 @@
 
 <div id='foot-wrapper'>
   <div class='container'>
-    <ul>
-      <li>COPYRIGHT © 2012 HEYOOK WEBDESIGN. ALL RIGHTS RESERVED</li>
-    
+    <p>
+      COPYRIGHT © 2012 HEYOOK WEBDESIGN. ALL RIGHTS RESERVED
+    </p>
   </div>
 </div>
