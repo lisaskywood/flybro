@@ -17,6 +17,6 @@ jQuery ->
       ,100
   
   ($ '#menu').stickyfloat duration: 300
-  ($ '#menu a').bind 'click', (event) ->
+  ($ '#menu a.dscroll').bind 'click', (event) ->
     $.scrollTo $($(this).data 'scroll-to')
     event.preventDefault()
